@@ -1,12 +1,18 @@
-
-
 import React from 'react';
-import { View, Modal, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
 
 import PropTypes from 'prop-types';
+import {
+  Image,
+  Modal,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+  ViewPropTypes,
+} from 'react-native';
 
-import styles from './style';
 import BaseComponent from './BaseComponent';
+import styles from './style';
 
 let componentIndex = 0;
 
@@ -14,21 +20,21 @@ const propTypes = {
   data: PropTypes.array,
   onChange: PropTypes.func,
   initValue: PropTypes.string,
-  style: View.propTypes.style,
-  selectStyle: View.propTypes.style,
-  optionStyle: View.propTypes.style,
+  style: ViewPropTypes.style,
+  selectStyle: ViewPropTypes.style,
+  optionStyle: ViewPropTypes.style,
   optionTextStyle: Text.propTypes.style,
-  sectionStyle: View.propTypes.style,
+  sectionStyle: ViewPropTypes.style,
   sectionTextStyle: Text.propTypes.style,
-  cancelStyle: View.propTypes.style,
+  cancelStyle: ViewPropTypes.style,
   cancelTextStyle: Text.propTypes.style,
-  overlayStyle: View.propTypes.style,
+  overlayStyle: ViewPropTypes.style,
   cancelText: PropTypes.string,
 };
 
 const defaultProps = {
   data: [],
-  onChange: () => {},
+  onChange: () => { },
   initValue: 'Select me!',
   style: {},
   selectStyle: {},
